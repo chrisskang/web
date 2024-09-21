@@ -1,5 +1,15 @@
+import { MasterLayout } from "./component/MasterLayout";
+import Shader from "./pages/Shader";
+import ThreeBody from "./pages/ThreeBody";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <MasterLayout />
+      <ThreeBody />
+      <Shader />
+    </>
+  );
 }
 
 export default App;
