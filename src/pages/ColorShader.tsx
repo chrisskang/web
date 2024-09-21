@@ -2,8 +2,8 @@ import { useMemo, useRef } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import { Color, Mesh } from "three";
-import fragmentShader from "./shaders/colorShaders/colorFrag.glsl";
-import vertexShader from "./shaders/colorShaders/colorVert.glsl";
+import fragmentShader from "./shaders/color/colorFrag.glsl";
+import vertexShader from "./shaders/color/colorVert.glsl";
 
 const Shader = () => {
   // This reference will give us direct access to the mesh

@@ -1,5 +1,5 @@
 import { MasterLayout } from "./component/MasterLayout";
-import Shader from "./pages/Shader";
+import ColorShader from "./pages/ColorShader";
 import ThreeBody from "./pages/ThreeBody";
 
 function App() {
@@ -7,7 +7,8 @@ function App() {
     <>
       <MasterLayout />
       <ThreeBody />
-      <Shader />
+      <ColorShader />
+      {/* <ParticleShader /> */}
     </>
   );
 }
