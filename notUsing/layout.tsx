@@ -1,5 +1,5 @@
 import { Panel, PanelGroup } from "react-resizable-panels";
-import ColorShader from "../src/pages/ColorShader";
+import ColorShader from "../src/canvas/colorShader";
 
 const layout = () => {
   return (

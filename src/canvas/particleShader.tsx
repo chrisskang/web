@@ -1,7 +1,9 @@
-import { Box } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { useMemo } from "react";
+import * as THREE from "three";
 
+import fragmentShader from "./shaders/particle/particleFrag.glsl";
+import vertexShader from "./shaders/particle/particleVert.glsl";
 //TODO FIX SHADER INPUT
 
 const Particle = () => {
@@ -23,16 +25,14 @@ const Particle = () => {
     []
   );
 
-  useFrame(() => {
-    shaderArgs.uniforms.uTime.value++;
-  });
+  // useFrame(() => {
+  //   shaderArgs.uniforms.uTime.value++;
+  // });
 
   return (
     <div className="container relative flex items-center justify-center">
-      <div className="lg:w-[1000px] lg:h-[1000px] w-[500px] h-[500px] p-4 z-0  outline outline-gray-500 outline-1">
+      <div className="lg:w-[1000px] lg:h-[1000px] w-[500px] h-[500px] p-4 z-0 bg-black">
         <Canvas camera={{ position: [0.0, 1.0, 0.0] }}>
-          <Box args={[1, 1, 1]} />
-
           <points rotation={[-Math.PI / 2, 0, 0]}>
             <bufferGeometry attach="geometry">
               <bufferAttribute
